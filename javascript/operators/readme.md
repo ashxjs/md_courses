@@ -1,61 +1,96 @@
-## Variables
+## Introduction aux opérateurs en JavaScript
 
-### Qu'est-ce qu'une variable ?
+Les opérateurs sont des symboles qui permettent d'effectuer des opérations sur une ou plusieurs valeurs. Imaginons que ces opérateurs soient comme des outils dans une boîte à outils, chaque outil ayant un rôle spécifique.
 
-Une variable est comme une boîte où vous pouvez stocker des valeurs pour les utiliser ou les manipuler plus tard.
+### Opérateurs d'égalité
 
-<SyntaxHighlighter language="javascript" style="materialDark">
-let age = 25;
-</SyntaxHighlighter>
+Ces opérateurs sont utilisés pour comparer la valeur ou le type de deux variables.
 
-### Déclaration de variable (var, let, const)
+- `==` : Compare les valeurs et renvoie `true` si elles sont égales. Par exemple, `5 == "5"` renverra `true` car la valeur est la même, même si le type est différent.
+- `===` : Compare à la fois la valeur et le type, et renvoie `true` si les deux sont égaux. Ainsi, `5 === "5"` renverra `false` car le type est différent.
+- `!=` : Renvoie `true` si les valeurs ne sont pas égales.
+- `!==` : Renvoie `true` si la valeur ou le type ne sont pas égaux.
 
-- `var`: Ancienne manière de déclarer des variables. Portée fonctionnelle.
-- `let`: Nouvelle manière de déclarer des variables. Portée de bloc.
-- `const`: Comme `let`, mais la valeur ne peut pas être modifiée.
+#### Exercices pratiques
 
-<SyntaxHighlighter language="javascript" style="materialDark">
-var name = "John";
-let age = 30;
-const pi = 3.14159;
-</SyntaxHighlighter>
-
-### Types natifs en JavaScript
-
-JavaScript possède quelques types de données fondamentaux, souvent appelés types primitifs, qui sont les suivants :
-
-- Types Basiques:
-  - **number**: Représente les nombres entiers et flottants.
-  - **string**: Représente les chaînes de caractères.
-  - **boolean**: Représente une valeur vraie ou fausse (`true` ou `false`).
-- Types Complexes:
-  - **object**: Utilisé stocker un ensemble de propriété par clés.
-  - **undefined**: Utilisé pour les variables qui ont été déclarées mais n'ont pas encore été attribuées.
-  - **null**: Représente une absence délibérée de valeur.
-  - **NaN**: Utilisé pour indiquer qu'une opération mathématique est invalide.
+1. Quelle sera la sortie de ce code:
 
 <SyntaxHighlighter language="javascript" style="materialDark">
-let aNumber = 42; // Number
-let aString = "Hello"; // String
-let aBoolean = true; // Boolean
-let anObject = {}; // Object
-let notDefined; // undefined
-let isEmpty = null; // null
-let emptyArray = []; // Array
-let stringArray = ["string1", "string2"]; // Array
+   console.log(10 == "10");
 </SyntaxHighlighter>
 
-## Exercices
+2. Que renvoie le code suivant:
 
-### Objectif
+<SyntaxHighlighter language="javascript" style="materialDark">
+   console.log(7 !== "7");
+</SyntaxHighlighter>
+3. Évaluez le résultat de:
 
-L'objectif de cet exercice est de tester votre compréhension des variables.
+<SyntaxHighlighter language="javascript" style="materialDark">
+   console.log(4 === 4 && 5 != "5");
+</SyntaxHighlighter>
 
-### Instructions
+### Opérateurs de comparaison
 
-1. Déclarez une variable `firstName` et assignez-lui votre prénom comme valeur.
-2. Déclarez une variable `lastName` et assignez-lui votre nom de famille comme valeur.
-3. Déclarez une variable `age` et assignez-lui votre âge comme valeur.
-4. Déclarez une variable `isAdult` qui sera `true`.
-5. Déclarez une variable `skills` et assignez-lui un tableau contenant les noms de quelques compétences que vous possédez (par exemple, "JavaScript", "HTML", "CSS").
-6. Déclarez une variable `person` et assignez-lui un objet contenant les clés `firstName`, `lastName`, `age`, `isAdult`, et `skills`, en utilisant les variables que vous avez déjà déclarées.
+Ces opérateurs sont utilisés pour comparer deux valeurs.
+
+- `>` : Vérifie si la valeur à gauche est plus grande que celle de droite.
+- `<` : Vérifie si la valeur à gauche est plus petite que celle de droite.
+- `<=` : Vérifie si la valeur à gauche est plus petite ou égale à celle de droite.
+- `>=` : Vérifie si la valeur à gauche est plus grande ou égale à celle de droite.
+
+#### Exercices pratiques
+
+#### Exercices pratiques sur les opérateurs d'égalité
+
+#### Consigne: Pour chacun des exercices ci-dessous trouve l'opérateur qui renvoie `true`.
+
+Pour valider l'exercice tu devras afficher le message avec la fonction `console.log(MESSAGE A AFFICHER)`
+
+1. Message: "égalité entre une string et un number"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const a = "5";
+   const b = 5;
+</SyntaxHighlighter>
+
+2. Message: "égalité entre une string et un string"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const x = "Hello World !";
+   const y = "Hello World";
+</SyntaxHighlighter>
+
+3. Message: "égalité entre deux tableaux"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const array1 = [1, 2, 3];
+   const array2 = [1, 2, 3];
+</SyntaxHighlighter>
+
+#### Exercices pratiques sur les opérateurs de comparaison
+
+1. Message: "La personne est bien majeur"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const age = 20;
+   const isAdult = age >= 18;
+</SyntaxHighlighter>
+
+2. Message: "Winter is comming"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const temperature = -5;
+   const isFreezing = temperature <= 0;
+</SyntaxHighlighter>
+
+3. Message: "La vitesse est bien comprise entre 30 et 50 km/h"
+
+<SyntaxHighlighter language="javascript" style="materialDark">
+   const speed = 45;
+   const isSpeeding = speed > 30 && speed < 50;
+</SyntaxHighlighter>
+
+---
+
+Nous espérons que cette introduction aux opérateurs en JavaScript vous a été utile et vous a donné envie de poursuivre cette formation !

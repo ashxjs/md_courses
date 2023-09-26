@@ -3,10 +3,11 @@
 ### Qu'est-ce qu'une variable ?
 
 Une variable est comme une boîte où vous pouvez stocker des valeurs pour les utiliser ou les manipuler plus tard.
-
 <SyntaxHighlighter language="javascript" style="materialDark">
 let age = 25;
 </SyntaxHighlighter>
+
+Ici dans cette example nous créont une variable age et nous lui affectont la valeur 25;
 
 ### Déclaration de variable (var, let, const)
 
@@ -18,6 +19,15 @@ let age = 25;
 var name = "John";
 let age = 30;
 const pi = 3.14159;
+
+function addition() {
+const a = 1;
+const b = 2;
+
+return a + b; // correct: on est bien dans le même bloc.
+}
+
+console.log(a); // incorrect: on essaie d'acceder à des variables qui n'existe pas en dehors de la fonction addition.
 </SyntaxHighlighter>
 
 ### Types natifs en JavaScript
